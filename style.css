@@ -10,7 +10,7 @@
     padding: 4px;
 }
 .item2{
-    background-color: blueviolet;
+    background-color: red;
 
     /* relative คือ อ้างอิงจากตำแหน่งเดิม */
     /* position: relative; */
