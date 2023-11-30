@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position</title>
+
+    <style>
+        .container{
+            border: 1px solid red;
+            min-height: 200px;
+
+            position: relative;
+        }
+        .item{
+            background-color: aqua;
+            border: 1px dotted rgb(1, 55, 1);
+            padding: 4px;
+        }
+        .item2{
+            background-color: blueviolet;
+
+            /* relative คือ อ้างอิงจากตำแหน่งเดิม */
+            /* position: relative; */
+            /* top คือ ออกจาก top  + - ได้   top botton top เป็นหลัก */
+            /* top: 10px; */
+            /* left คือ ออกจาก left  + - ได้   left right left เป็นหลัก */
+            /* left: 10px; */
+            /* right คือ ออกจาก right  + - ได้ */
+            /* right: 30px; */
+            /* botton คือ ออกจาก botton  + - ได้ */
+            /* bottom: 3px; */
+
+
+
+            /* เหมือนลอยอยู่ หลุดจาก flow */
+            /*  absolute  อ้างอิงจาก parent position:อะไรก็ได้ที่ไม่ใช่ static ที่ครอบมันใกล้ที่สุด */
+            position: absolute;
+            
+            /* ถ้ามาพร้อมกันกลายเป็นยืด item ออก */
+            top: 50px; bottom: 50px;
+
+            /* ถ้ามาพร้อมกันกลายเป็นยืด item ออก */
+            left: 100px; right: 50px; 
+
+
+
+            /* z-index: 0; ของ static */
+            /* กำหนดได้ทุกอย่าง(position)ยกเว้น static */
+            /* เรียงชั้น */
+            z-index: 1;
+
+
+            /* ความโปร่ง */
+            /* opacity: 0.5; */
+        }
+        .item2x{
+            background-color: antiquewhite;
+            position: absolute;
+            left: 300px;
+        }
+        .item3{
+            position: relative;
+
+            /* z-index สามารถทะลุลูกหลานได้ */
+            z-index: 5;
+
+            opacity: 0.5;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>CSS posiition</h1>
+    <div class="container">
+        <div class="item item1">Item1</div>
+        <div class="item item2">
+            <div class="item2x">
+                item2x
+            </div>
+        </div>
+        <div class="item item3">Item3</div>
+    </div>
+
+
+
+</body>
+</html>
